@@ -10,7 +10,7 @@ useEffect(()=>{
     .then(res =>res.json())
     .then(data =>setMeals(data))
 },[])
-console.log(meals);
+
 
     return (
         <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1'>

@@ -2,7 +2,7 @@ import React from 'react';
 
 const DisplayDinner = (props) => {
     const {img,title,description,Price}=props.meal
-    console.log(props.meal);
+
     return(
         <div>
        

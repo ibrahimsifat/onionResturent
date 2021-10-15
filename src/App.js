@@ -1,8 +1,9 @@
 import { BrowserRouter,Switch,Route } from 'react-router-dom';
 import './App.css';
+import AuthProvider from './components/context/AuthProvider';
 import Home from './components/Home/Home';
 import Brackfast from './components/Home/Meals-container/Meals/Brackfast/Brackfast';
-import CheckoutBrackfast from './components/Home/Meals-container/Meals/Brackfast/CheckoutBrackfast';
+import Checkout from './components/Home/Meals-container/Meals/Brackfast/Checkout';
 import Dinner from './components/Home/Meals-container/Meals/Dinner/Dinner';
 
 
@@ -21,6 +22,7 @@ import SignUp from './components/SignUp/SignUp';
 function App() {
   return (
     <div>
+   <AuthProvider>
    <BrowserRouter>
       <Navigation></Navigation>
       
@@ -46,8 +48,8 @@ function App() {
           <Route path='/dinner'> 
               <Dinner></Dinner>
           </Route>
-          <Route path='/brackfastcheckout/:mealId'> 
-              <CheckoutBrackfast></CheckoutBrackfast>
+          <Route path='/Checkout/:mealId'> 
+              <Checkout></Checkout>
           </Route>
 
           <Route path='/signup'> 
@@ -65,6 +67,7 @@ function App() {
      
      <Footer></Footer>
    </BrowserRouter>
+   </AuthProvider>
     </div>
   );
 }

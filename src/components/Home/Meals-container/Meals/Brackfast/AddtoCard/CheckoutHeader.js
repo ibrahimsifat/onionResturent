@@ -1,14 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import Logo from '../../img/home/logo2.png'
-import useAuth from './useAuth';
-const Navigation = () => {
-    const {user,logOut}=useAuth()
-    return (
-        <div className="flex flex-wrap place-items-center ">
+import Logo from '../../../../../../img/home/logo2.png'
+const CheckoutHeader = () => {
+  return (
+    <div>
+      <div className="flex flex-wrap place-items-center h-screen">
         <section className="relative mx-auto">
           <nav className="flex justify-between  w-screen">
-            <div className="px-5 xl:px-12 py-3 flex w-full items-center">
+            <div className="px-5 xl:px-12 py-6 flex w-full items-center">
               <NavLink className="text-3xl font-bold font-heading" to="/">
                 <img className="h-9" src={Logo} alt="logo" /> 
               </NavLink>
@@ -59,7 +58,9 @@ const Navigation = () => {
           </nav>
         </section>
       </div>
-    );
+      
+    </div>
+  );
 };
 
-export default Navigation;
+export default CheckoutHeader;
