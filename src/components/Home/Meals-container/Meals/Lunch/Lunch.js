@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from 'react';
+import { useHistory } from 'react-router';
+import useBrackfast from '../MealsHooks/useBrackfast';
 
 import DisplayLunch from './DisplayLunch'
 const Lunch = () => {
-const [meals,setMeals]=useState([])
-useEffect(()=>{
-    const url='../Lunch.json'
-    fetch(url)
-    .then(res =>res.json())
-    .then(data =>setMeals(data))
-},[])
-
+    const history=useHistory()
+    const handelBuyBtn=(id)=>{
+      history.push(`/Checkout/${id}`)
+    }
+    const [meals]=useBrackfast()
 
     return (
         <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1'>
@@ -18,6 +17,7 @@ useEffect(()=>{
                meals.map(meal=><DisplayLunch
                 key={meal.id}
                 meal={meal}
+                handelBuyBtn={handelBuyBtn}
                 ></DisplayLunch>)
           }
         </div>

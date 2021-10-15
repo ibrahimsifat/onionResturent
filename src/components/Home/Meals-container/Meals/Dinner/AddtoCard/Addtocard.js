@@ -5,8 +5,7 @@ import Checkoutbody from './Checkoutbody';
 const Addtocard = () => {
     return (
         <div>
-            
-
+       
             <Checkoutbody></Checkoutbody>
         </div>
     );

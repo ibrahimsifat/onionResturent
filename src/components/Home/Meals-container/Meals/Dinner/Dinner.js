@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { useHistory } from 'react-router';
+import useBrackfast from '../MealsHooks/useBrackfast';
 import DisplayDinner from './DisplayDinner';
 
 
 const Dinner = () => {
-const [meals,setMeals]=useState([])
-useEffect(()=>{
-    const url='../dinner.json'
-    fetch(url)
-    .then(res =>res.json())
-    .then(data =>setMeals(data))
-},[])
+    const history=useHistory()
+    const handelBuyBtn=(id)=>{
+      history.push(`/Checkout/${id}`)
+    }
+    const [meals]=useBrackfast()
 
 
     return (
@@ -19,6 +19,7 @@ useEffect(()=>{
                meals.map(meal=><DisplayDinner
                 key={meal.id}
                 meal={meal}
+                handelBuyBtn={handelBuyBtn}
                 ></DisplayDinner>)
           }
         </div>

@@ -15,7 +15,7 @@ const Navigation = () => {
               <ul className="hidden md:flex px-4 mx-auto font-semibold font-heading space-x-12">
                 <li><NavLink className=" hover:text-red-500 " to="/">Home</NavLink></li>
                 <li><NavLink className=" hover:text-red-500 " to="/aboutus">About us</NavLink></li>
-                <li><NavLink className=" hover:text-red-500 " to="/aboutus">Login</NavLink></li>
+                <li><NavLink className=" hover:text-red-500 " to="/login">Login</NavLink></li>
                 
               </ul>
               <div className="hidden xl:flex items-center space-x-5 items-center">

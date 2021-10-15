@@ -46,7 +46,7 @@ const {signInUsingGoolge,handelUserPassword,
 			
 			 >Or sign-in with google</button>
 								</div>
-				<p class="mt-8"> Dont have an account? <NavLink class="cursor-pointer text-sm text-blue-600" to='/register'> Join free today</NavLink></p>
+				<p class="mt-8"> Dont have an account? <NavLink class="cursor-pointer text-sm text-red-500" to='/signup'> Join today</NavLink></p>
 			</div>
 		</div>
 	</div>

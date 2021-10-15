@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import Svg from '../shared/Svg'
 import useFirebase from '../shared/useFirebase';
 const SignUp = () => {
@@ -56,6 +57,9 @@ const SignUp = () => {
                             class="block w-full max-w-xs mx-auto bg-red-500 hover:bg-red-700 focus:bg-red-700 text-white rounded-lg px-3 py-3 font-semibold">REGISTER NOW</button>
                         </div>
                     </div>
+                    <p className='pt-2'>Already Registered?
+                        <NavLink className='text-red-500 pl-1 cursor-pointer text-sm' to="/login"> Sign In</NavLink>
+                    </p>
                 </div>
             </div>
         </div>
