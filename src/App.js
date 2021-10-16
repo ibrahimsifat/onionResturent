@@ -16,6 +16,7 @@ import Lunch from './components/Home/Meals-container/Meals/Lunch/Lunch';
 
 
 import Login from './components/Login/Login';
+import Cart from './components/shared/Cart';
 
 
 import Footer from './components/shared/Footer';
@@ -57,6 +58,9 @@ function App() {
           </Route>
           <Route path='/Checkout/:mealId'> 
               <Checkout></Checkout>
+          </Route>
+          <Route path='/cart'> 
+              <Cart></Cart>
           </Route>
 
           <Route path='/signup'> 
