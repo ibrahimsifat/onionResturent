@@ -1,13 +1,15 @@
 import React from 'react';
 import { useParams } from 'react-router';
-import useBrackfast from '../MealsHooks/useBrackfast';
-import Checkoutbody from './AddtoCard/Checkoutbody';
+import Checkoutbody from '../checkoutbody/Checkoutbody';
+import UseAll from '../MealsHooks/UseAll';
+
+
 const Checkout = () => {
     // const [addMeal,setAddMeal]=useState()
 
 
 const{mealId}=useParams()
-const[meals]=useBrackfast()
+const[meals]=UseAll()
 
 
     const mached= meals.filter(item=> item.id===mealId)

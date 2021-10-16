@@ -1,11 +1,12 @@
 import { BrowserRouter,Switch,Route } from 'react-router-dom';
 import './App.css';
+import AboutUs from './components/AboutUs/AboutUs';
 import AuthProvider from './components/context/AuthProvider';
 import Home from './components/Home/Home';
 import Brackfast from './components/Home/Meals-container/Meals/Brackfast/Brackfast';
 import Checkout from './components/Home/Meals-container/Meals/Brackfast/Checkout';
-import DCheckoutbody from './components/Home/Meals-container/Meals/Dinner/AddtoCard/DCheckoutbody';
-import DCheckout from './components/Home/Meals-container/Meals/Dinner/DCheckout';
+
+
 import Dinner from './components/Home/Meals-container/Meals/Dinner/Dinner';
 
 
@@ -38,6 +39,10 @@ function App() {
               <Home></Home>
           </Route>
 
+          <Route path='/aboutus'> 
+              <AboutUs></AboutUs>
+          </Route>
+
           <Route path='/login'> 
               <Login></Login>
           </Route>
@@ -52,9 +57,6 @@ function App() {
           </Route>
           <Route path='/Checkout/:mealId'> 
               <Checkout></Checkout>
-          </Route>
-          <Route path='/DCheckout/:mealId2'> 
-              <DCheckoutbody></DCheckoutbody>
           </Route>
 
           <Route path='/signup'> 

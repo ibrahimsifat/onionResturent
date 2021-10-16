@@ -1,13 +1,14 @@
 import React from 'react';
 import { useParams } from 'react-router';
-import useDinner from '../MealsHooks/useDinner';
-import DCheckoutbody from './AddtoCard/DCheckoutbody';
-const DCheckout = () => {
+import Checkoutbody from '../checkoutbody/Checkoutbody';
+import UseAll from '../MealsHooks/UseAll';
+
+const Checkout = () => {
     // const [addMeal,setAddMeal]=useState()
 
 
 const{mealId2}=useParams()
-const[meals]=useDinner()
+const[meals]=UseAll()
 
 
     const mached= meals.filter(item=> item.id===mealId2)
@@ -16,12 +17,12 @@ const[meals]=useDinner()
 <div>
     
 {
-    mached.map(items=><DCheckoutbody
+    mached.map(items=><Checkoutbody
     items={items}
-    ></DCheckoutbody>)
+    ></Checkoutbody>)
 }
 </div>
     );
 };
 
-export default DCheckout;
+export default Checkout;

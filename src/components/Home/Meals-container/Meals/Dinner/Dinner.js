@@ -7,7 +7,7 @@ import DisplayDinner from './DisplayDinner';
 const Dinner = () => {
     const history=useHistory()
     const handelBuyBtn=(id)=>{
-      history.push(`/DCheckout/${id}`)
+      history.push(`/Checkout/${id}`)
     }
     const [meals]=useDinner()
 

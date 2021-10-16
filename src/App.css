@@ -14,3 +14,15 @@
 .box-shadow {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
+
+.about_banner {
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url(../src//img/Image/aboutjpg.jpg);
+    width: 100%;
+    background-size: contain;
+    height: 600px;
+    background-repeat: no-repeat;
+}
+
+.user-card {
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}

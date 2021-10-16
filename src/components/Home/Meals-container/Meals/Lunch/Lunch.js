@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useHistory } from 'react-router';
-import useBrackfast from '../MealsHooks/useBrackfast';
+import UseLunch from '../MealsHooks/UseLunch';
 
 import DisplayLunch from './DisplayLunch'
 const Lunch = () => {
@@ -8,7 +8,7 @@ const Lunch = () => {
     const handelBuyBtn=(id)=>{
       history.push(`/Checkout/${id}`)
     }
-    const [meals]=useBrackfast()
+    const [meals]=UseLunch()
 
     return (
         <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1'>
