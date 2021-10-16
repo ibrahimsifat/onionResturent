@@ -1,15 +1,15 @@
 import React from 'react';
 import { useHistory } from 'react-router';
-import useBrackfast from '../MealsHooks/useBrackfast';
+import useDinner from '../MealsHooks/useDinner';
 import DisplayDinner from './DisplayDinner';
 
 
 const Dinner = () => {
     const history=useHistory()
     const handelBuyBtn=(id)=>{
-      history.push(`/Checkout/${id}`)
+      history.push(`/DCheckout/${id}`)
     }
-    const [meals]=useBrackfast()
+    const [meals]=useDinner()
 
 
     return (

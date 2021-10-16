@@ -5,7 +5,7 @@ import React from 'react';
 
 
 const DisplayBrackfast = (props) => {
-  const {img,title,discription,Price,id}=props.meal
+  const {img,title, description,Price,id}=props.meal
   const{handelBuyBtn}=props
  
 
@@ -22,7 +22,7 @@ const DisplayBrackfast = (props) => {
   </svg>
       </span>
       <h1 class="mb-1 text-md font-sans font-semibold text-gray-700 hover:text-gray-900 cursor-pointer">{title}</h1>
-      <span class="text-sm text-gray-700 hover:text-gray-400">{discription}</span>
+      <span class="text-sm text-gray-700 hover:text-gray-400">{description}</span>
       <h1 class="mb-1 text-xl font-sans font-semibold text-gray-700 hover:text-gray-900 cursor-pointer">${Price}</h1>
     </div>
   </div>
